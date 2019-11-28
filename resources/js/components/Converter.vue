@@ -1,7 +1,10 @@
 <template>
     <div>
+
+	<h4 class="primary-text center">Calculadora de Câmbio</h4>
+
 	<label for="valor">Reais</label>
-	<input id="valor" v-model="valor" name="valor" type="text" />
+	<input @focus="valor=''" id="valor" v-model="valor" name="valor" type="number" />
 
 	<br/> <br/>
 
@@ -53,10 +56,10 @@
 	 ),
 
 	 calculo({low,code}) {
-	     return this.format(
-		 parseFloat(this.valor) / this.parseMoney(low),
-		 code
-	     )
+	     if (this.valor == '') return '-';
+
+	     let [v,l] = [parseFloat(this.valor), this.parseMoney(low)];
+	     return this.format(v / l, code);
 	 },
 
 	 format: (val,code) => val.toLocaleString('pt-BR', {
