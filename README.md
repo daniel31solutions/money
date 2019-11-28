@@ -1,4 +1,4 @@
-<p align="center"><img src="https://31solutions.com/imgs/logo-hor.png" width="400"></p>
+<p align="center"><img src="https://31solutions.com/imgs/logo-hor.png" width="300"></p>
 
 ## Money Converter
 
