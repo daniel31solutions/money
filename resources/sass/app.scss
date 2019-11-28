@@ -1,0 +1,14 @@
+$primary: #4a148c;
+$light-primary: lighten($primary, 10%);
+
+.primary-text {
+    color: $primary;
+}
+
+.primary {
+    background-color: $primary;
+}
+
+.light {
+    background-color: #ececec;
+}
